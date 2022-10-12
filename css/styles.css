@@ -38,7 +38,7 @@ img {
 }
 
 .tasks__list {
-	height: 460px;
+	max-height: 460px;
 	overflow: auto;
 }
 
