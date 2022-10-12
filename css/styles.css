@@ -1,0 +1,77 @@
+html {
+	height: 100%;
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+	scroll-behavior: smooth;
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+body {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	font-family: 'Livvic', 'Arial', 'sans-serif';
+	font-size: 16px;
+	line-height: 1.5;
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.tasks__list {
+	height: 460px;
+	overflow: auto;
+}
+
+.tasks__text {
+	font-size: 20px;
+}
+
+.tasks__text::-webkit-scrollbar {
+	width: 0px;
+	background: transparent;
+	/* make scrollbar transparent */
+}
+
+.remove-task-btn {
+	font-size: 25px;
+}
+
+.tasks__completed-checkbox {
+	width: 20px;
+	height: 20px;
+}
+
+.del {
+	text-decoration: line-through;
+	color: #999999;
+}
+
+.tasks__remove-btn {
+	font-size: 24px;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+.tasks__item:hover .tasks__remove-btn {
+	opacity: 1;
+}

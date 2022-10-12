@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="icon" type="image/png" href="img/to-do-list.png" />
+	<link href="https://fonts.googleapis.com/css2?family=Livvic:wght@400;700&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/styles.css" />
+	<title>Todo List</title>
+</head>
+
+<body class="bg-light">
+	<h1 class="sr-only">todo list</h1>
+
+	<main>
+		<div class="container">
+			<h2 class="h1 text-center text-danger my-3">todos</h2>
+
+
+			<form class="tasks__form bg-white p-4 rounded-lg col-12 col-lg-6 mx-auto js-tasks__form"
+				action="https/echo.htmlacademy.ru" method="POST" autocomplete="off">
+				<!-- Task input -->
+				<input class="tasks__input form-control mb-1 form-control-lg js-tasks__input" type="text"
+					name="user_task" aria-label="What you want to do" placeholder="Add todo" required />
+
+				<!-- Ul of tasks -->
+				<ul class="tasks__list list-group-fluish list-unstyled js-tasks__list overflow-auto"></ul>
+
+				<!-- Ul's bottom features -->
+				<div
+					class="tasks__filter-btns-box d-flex flex-column flex-sm-row justify-content-between align-items-center">
+					<p class="m-0">
+						<span class="tasks__left js-tasks__left">0</span>
+						tasks left
+					</p>
+
+					<div class="tasks__features-filter my-2 my-sm-0">
+						<button class="tasks__filter-all btn btn-sm btn-outline-secondary js-tasks__filter-all"
+							type="button">
+							All
+						</button>
+						<button class="tasks__filter-active mx-1 btn btn-sm btn-outline-primary js-tasks__filter-active"
+							type="button">
+							Active
+						</button>
+						<button
+							class="tasks__filter-completed btn btn-sm btn-outline-success js-tasks__filter-completed"
+							type="button">
+							Completed
+						</button>
+					</div>
+
+					<button class="tasks__clear-completed btn btn-sm btn-danger js-tasks__clear-completed"
+						type="button">
+						Clear all
+					</button>
+				</div>
+			</form>
+		</div>
+	</main>
+
+	<!-- Tasks item template -->
+	<template id="todo__item-template">
+		<li
+			class="tasks__item list-group-item d-flex alert align-items-center p-2 border-right-0 border-left-0 border-top-0">
+			<div class="custom-control custom-checkbox mr-3 flex-shrink-0">
+				<input class="tasks__completed-checkbox custom-control-input" type="checkbox" name="task_completed"
+					id="customCheck1" aria-label="Delete" />
+				<label class="tasks__completed-label custom-control-label" for="customCheck1">
+				</label>
+			</div>
+
+			<p class="tasks__text mr-auto m-0 overflow-auto">Modul5 go</p>
+
+			<button class="tasks__remove-btn btn text-danger font-weight-bold js-remove-task-btn" type="button">
+				&#10005;
+			</button>
+		</li>
+	</template>
+
+	<script src="js/jquery-3.5.1.min.js"></script>
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/utilities.js"></script>
+	<script src="js/scripts.js"></script>
+</body>
+
+</html>
